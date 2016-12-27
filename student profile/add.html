@@ -1,0 +1,75 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script src="https://code.jquery.com/jquery-2.1.4.js"></script>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Add</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css" media="all" />
+<link href="css/th.css" rel="stylesheet" type="text/css" media="all"/>
+<link href="css/th.css" rel="stylesheet" type="text/css" media="all"/>
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<div class="header-wrapper">
+  <div class="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="profile.html" >View Profile</a></li>
+	<li><a href="add.html" class="active">Add Student</a></li>
+      <li><a href="update.html">Update</a></li>
+    </ul>
+  </div>
+  <div class="clearing"></div>
+  <div class="logo-search-wrapper">
+    <div class="logo-search-container">
+      <div class="logo"> Student Profile </div>     
+    </div>
+  </div>
+</div>
+<div class="main-content-wrapper">
+  <div class="left-column">
+    <div class="left-col-content ">
+      <div class="left-col-content-title">
+        <h1>STUDENT DETAILS</h1>
+      </div>
+    </div>
+    <form action="process.php" method="POST">
+      <div class="contact-form margin-top">
+        <label> <span>Name</span>
+        <input type="text" class="input_text" name="name" id="name"/>
+        </label>
+		<label> <span>Roll Number</span>
+        <input type="text" class="input_text" name="rno" id="rno"/>
+        </label>
+		<label> <span>Fathername</span>
+        <input type="text" class="input_text" name="fname" id="fname"/>
+        </label>
+      <label><span>Sex</span></label>
+      <input type="radio" name="sex" value="male"/>  Male           . 
+      <input type="radio" name="sex" value="female"/>  Female  
+      </label> 
+<label></label> 
+        <label> <span>Email</span>
+        <input type="text" class="input_text" name="email" id="email"/>
+        </label>
+        <label> <span>Qualification</span>
+        <input type="text" class="input_text" name="qua" id="qua"/>
+        </label>
+         <label> <span>Phone</span>
+        <input type="text" class="input_text" name="phn" id="phn"/>
+        </label>
+        <label> <span>Address</span>
+        <textarea class="message" name="addr" id="addr"></textarea>
+       <center> <input type="submit" value="Submit">
+        </label>
+      </div>
+    </form>
+    <div class="clearing"></div>
+    
+  </div>
+  
+
+  </div>
+</div>
+<div class="copyrights"></div></body>
+</html>

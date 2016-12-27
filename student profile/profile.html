@@ -1,0 +1,99 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<script>
+function valid(mail) {
+var mail;
+var organization = '{"members":[' +
+'{"name":"Premalatha","rno":"14mx26","sex":"Female","dob":"12/06/1993","place":"Tutricorn","phone":"8012272336","email":"tpr.premalatha@gmail.com","fname":"Rajasekaran","lan":"Tamil,English","qua":"MBA","img":"images/img-3.jpg"},' +
+'{"name":"Susmitha","rno":"14mx44","sex":"Female","dob":"07/07/1994","place":"Madurai","phone":"9087654567","email":"susmi@gmail.com","fname":"Dev","lan":"Tamil,English","qua":"MSC","img":"images/img-4.jpg"},' +
+'{"name":"Shanmugapriya","rno":"14mx35","sex":"Female","dob":"18/06/1994","place":"Coimbathore","phone":"9597004636","email":"shanz@gmail.com","fname":"Thatchinamoorthi","lan":"Tamil,English,Malayalam","qua":"MCA","img":"images/img-2.jpg"}]}';
+obj = JSON.parse(organization); 
+if(mail!=""){
+  var i;
+       for(i=0;i<obj.members.length;i++)
+       {	
+         if(obj.members[i].email == mail)
+        {
+         var nam=obj.members[i].name;
+         var rn=obj.members[i].rno;
+         var se=obj.members[i].sex;
+         var db=obj.members[i].dob;
+         var fnam=obj.members[i].fname;
+         var plac=obj.members[i].place;
+         var phon=obj.members[i].phone;
+         var qu=obj.members[i].qua;
+         var la=obj.members[i].lan;
+          var im=obj.members[i].img;
+       document.write("<link href='css/styles.css' rel='stylesheet' type='text/css'>");
+       document.write("<link rel='stylesheet' href='css/t.css' type='text/css' media='all'>");
+       document.write("<link rel='stylesheet' href='css/th.css' type='text/css' media='all'>");
+       document.write("<div class='header-wrapper'><div class='menu'><ul><li><a href='index.html'>Home</a></li><li><a href='profile.html' class='active'>View Profile</a></li><li><a href='add.html'>Add Student</a></li><li><a href='update.html'>Update</a></li></ul></div><div class='clearing'></div><div class='logo-search-wrapper'><div class='logo-search-container'><div class='logo'> Student Profile </div></div></div></div>");
+       document.write("");
+       document.write("<form><div class='contact-form margin-top'><img src='"+im+"' alt='image'  class='margin-right' style='width:170px;height:150px;'/><label> <span>Name</span><input type='text' class='input_text' name='name' id='name' value='"+nam+"'/></label><label> <span>Roll Number</span> <input type='text' class='input_text' name='Rno' id='name' value='"+rn+"'/> </label><label> <span>Fathername</span> <input type='text' class='input_text' name='fname' id='name' value='"+fnam+"'/></label><label><span>Sex</span></label><input type='text' class='input_text' name='fname' id='sex' value='"+se+"'/><label></label><label> <span>Email</span><input type='text' class='input_text' name='email' id='email' value='"+mail+"'/></label><label> <span>Qualification</span><input type='text' class='input_text' name='qua' id='subject' value='"+qu+"'/></label><label><span>Phone</span><input type='text' class='input_text' name='phn' id='subject' value='"+phon+"'/></label><label><span>Address</span><textarea class='message' name='feedback' id='feedback'>"+plac+"</textarea></label></div></form>"); 
+       }  
+     }
+}  
+else
+    alert("Invaid login");
+}
+
+</script>
+
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>Profiles</title>
+<link href="css/styles.css" rel="stylesheet" type="text/css" />
+<link href='http://fonts.googleapis.com/css?family=Ubuntu+Condensed' rel='stylesheet' type='text/css' />
+</head>
+<body>
+<div class="header-wrapper">
+  <div class="menu">
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="services.html" class="active">View Profile</a></li>
+	<li><a href="add.html">Add Student</a></li>
+      <li><a href="update.html">Update</a></li>
+    </ul>
+  </div>
+  <div class="clearing"></div>
+  <div class="logo-search-wrapper">
+    <div class="logo-search-container">
+      <div class="logo"> Student Profile </div>
+</div>
+  </div>
+</div>
+<div class="main-content-wrapper">
+  <div class="services">
+    <div class="panel">
+      <div class="title">
+        <h1>STUDENT INFORMATION</h1>
+      </div>
+      <div class="content margin-top"> <img src="images/img-2.jpg" alt="image"  class="margin-right" style="width:170px;height:150px;"/>
+        <h2>Name          : Shanmugapriya</h2>
+        <h2>RollNo        : 14mx35</h2>
+        <h2>Qualification : MCA</h2>
+        <h2><button type ="button"  onclick="valid('shanz@gmail.com')">View Profile</button></h2>
+      </div>
+      <div class="content margin-top"> <img src="images/img-3.jpg" alt="image"  class="margin-right" style="width:170px;height:150px;"/>
+        <h2>Name          : Premalatha</h2>
+        <h2>RollNo        : 14mx26</h2>
+       <h2>Qualification : MBA</h2>
+       <h2><button type ="button"  onclick="valid('tpr.premalatha@gmail.com')">View Profile</button></h2>
+      </div>
+      <div class="content margin-top"> <img src="images/img-4.jpg" alt="image"  class="margin-right" style="width:170px;height:150px;"/>
+        <h2>Name          : Susmitha</h2>
+        <h2>RollNo        : 14mx44</h2>
+        <h2>Qualification : MSC</h2>
+       <h2><button type ="button"  onclick="valid('susmi@gmail.com')">View Profile</button></h2>
+      </div>
+      <div class="content margin-top"> <img src="images/ig-3.jpg" alt="image"  class="margin-right" style="width:170px;height:150px;"/>
+        <h2>Name          : Sivanesh</h2>
+        <h2>RollNo        : 14mx60</h2>
+        <h2>Qualification : MA</h2>
+        <h2><button type ="button"  onclick="valid('siva@gmail.com')">View Profile</button></h2>
+      </div>
+    </div>
+  </div>
+</div>
+<div class="copyrights"></div></body>
+</html>
